@@ -33,8 +33,8 @@ async def session(engine):
 
         await session.rollback()
 
-        async with engine.begin() as conn:
-            await conn.run_sync(table_registry.metadata.drop_all)
+    async with engine.begin() as conn:
+        await conn.run_sync(table_registry.metadata.drop_all)
 
 
 @pytest.fixture(scope='module')
