@@ -9,6 +9,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.13.1"
 fastapi = {extras = ["all"], version = "^0.115.6"}
+sqlalchemy = "^2.0.36"
+psycopg = {extras = ["binary"], version = "^3.2.3"}
+alembic = "^1.14.0"
+greenlet = "^3.1.1"
+asyncpg = "^0.30.0"
+pwdlib = {extras = ["argon2"], version = "^0.2.1"}
 
 
 [tool.poetry.group.dev.dependencies]

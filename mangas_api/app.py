@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 
+from mangas_api.routers import users
+
 app = FastAPI(
     title='Mangas API',
     description='API para gerenciamento de HQs, ex: Mangas, Manhua, Manhwa.',
@@ -10,3 +12,6 @@ app = FastAPI(
 @app.get('/')
 def index_root():
     return {'message': 'Manga API esta rodando!'}
+
+
+app.include_router(users.router)
